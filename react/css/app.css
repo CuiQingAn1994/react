@@ -1,0 +1,139 @@
+.loader {
+  width: 11em;
+  height: 11em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -5.5em 0 0 -5.5em;
+  transform: rotate(45deg);
+}
+.loader:after,
+.loader:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 0.5em;
+}
+.loader:after {
+  animation: aftermove 2s infinite;
+}
+.loader:before {
+  animation: beforemove 2s infinite;
+}
+@keyframes aftermove {
+  0% {
+    box-shadow: -5em 3em #ffa500, 5em -3em #800080;
+  }
+  35% {
+    width: 11em;
+    box-shadow: 0 3em #ffa500, 0 -3em #800080;
+  }
+  70% {
+    width: 1em;
+    box-shadow: 5em 3em #ffa500, -5em -3em #800080;
+  }
+  100% {
+    box-shadow: -5em 3em #ffa500, 5em -3em #800080;
+  }
+}
+@keyframes beforemove {
+  0% {
+    box-shadow: 3em 5em #ffff00, -3em -5em #ff0000;
+  }
+  35% {
+    height: 11em;
+    box-shadow: 3em 0em #ffff00, -3em 0em #ff0000;
+  }
+  70% {
+    height: 1em;
+    box-shadow: 3em -5em #ffff00, -3em 5em #ff0000;
+  }
+  100% {
+    box-shadow: 3em 5em #ffff00, -3em -5em #ff0000;
+  }
+}
+.install {
+  width: 11em;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 25px;
+  line-height: 100px;
+}
+.header .container .logo {
+  cursor: pointer;
+}
+.header .container .search {
+  margin-top: 8px;
+}
+.header .container ul {
+  margin-top: 8px;
+}
+.header .container ul li {
+  font-size: 12px;
+}
+.header .container ul li a {
+  background: none;
+}
+.header .container ul li a:hover,
+.header .container ul li a:active,
+.header .container ul li a:visited {
+  background: none;
+}
+.header .banner {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+.header .banner-0 {
+  background-image: url(../img/banner/banner0.jpg);
+}
+.header .banner-1 {
+  background-image: url(../img/banner/banner1.jpg);
+}
+.section .container ul {
+  margin-left: -20px;
+}
+.section .container ul li {
+  position: relative;
+  list-style: none;
+  width: 200px;
+  height: 140px;
+  float: left;
+  margin-left: 15px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.section .container ul li a {
+  display: block;
+  width: 200px;
+  height: 140px;
+  color: #fff;
+  text-decoration: none;
+}
+.section .container ul li a .content h2 {
+  width: 200px;
+  height: 140px;
+  font-size: 16px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.section .container ul li a .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  display: none;
+}
+.section .container ul li:hover .layer {
+  display: block;
+}
